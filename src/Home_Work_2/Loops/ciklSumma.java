@@ -26,9 +26,12 @@ public class ciklSumma {
             if (a < q) {  //число 21 взял вручную после проверок, если умножать 21 раз то будет уже отрицательное число
                 for (int i = 1; i <= a; i++) {
                     s *= i;
-                    //  System.out.println(s + ";" + i + ":"); //этой строчкой проверял до какого числа умножает и положительный резульат,
-                }                                           // дебагом был бы более долгий процесс
-                System.out.println("перемноженые числа от 1 до " + a + " составляет: " + s);
+                    System.out.print(i);
+                    if (i != a){
+                        System.out.print(" * ");
+                    }
+                }
+                System.out.println(" = " + s + "; for");
             } else {
                 System.out.println("итоговое число слишком большое");
             }
@@ -38,9 +41,14 @@ public class ciklSumma {
             long n = 1;
             if (a < q) {
                 while (a >= n) {
+                    System.out.print(n);
                     k *= n++;
+
+                    if (n <= a){
+                        System.out.print(" * ");
+                    }
                 }
-                System.out.println("перемноженые числа от 1 до " + a + " составляет: " + k);
+                System.out.println(" = " + k + "; while");
             } else {
                 System.out.println("итоговое число слишком большое");
             }
@@ -50,11 +58,16 @@ public class ciklSumma {
             long r = 1;
             if (a < q) {
                 do {
+                    System.out.print(r);
                     e *= r++;
+
+                    if (r <= a){
+                        System.out.print(" * ");
+                    }
                 }
                 while (a >= r);
 
-                System.out.println("перемноженые числа от 1 до " + a + " составляет: " + e);
+                System.out.println(" = " + s + "; dowhile");
             } else {
                 System.out.println("итоговое число слишком большое");
             }
